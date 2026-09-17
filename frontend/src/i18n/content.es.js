@@ -9,10 +9,9 @@ export const es = {
     { id: "sobre-mi", label: "Sobre mi" },
     { id: "experiencia", label: "Experiencia" },
     { id: "skills", label: "Skills" },
-    { id: "proyectos", label: "Proyectos" },
     { id: "investigacion", label: "Investigación" },
     { id: "contacto", label: "Contacto & CV" },
-    { id: "ai-chat", label: "AI Chat" },
+    { id: "proyectos", label: "Proyectos" },
   ],
   sidebarStatus: "Disponible para nuevos proyectos",
 
@@ -189,6 +188,7 @@ export const es = {
       tags: ["Deep Learning", "PyTorch", "Airflow", "MLflow", "Computer Vision"],
       visual: "radar",
       github: "",
+      link: "",
       image: "",
       video: "",
     },
@@ -202,6 +202,7 @@ export const es = {
       tags: ["RAG", "pgvector", "FastAPI", "Docker", "Azure"],
       visual: "space",
       github: "",
+      link: "",
       image: "",
       video: "",
     },
@@ -215,6 +216,7 @@ export const es = {
       tags: ["RAG", "LoRA", "Fine-tuning", "REST APIs"],
       visual: "legal",
       github: "",
+      link: "",
       image: "",
       video: "",
     },
@@ -228,8 +230,10 @@ export const es = {
     backLabel: "Volver al inicio",
   },
   projectsUi: {
+    exploreLabel: "Explora aquí",
     githubLabel: "Ver en GitHub",
-    githubDisabledLabel: "Repositorio no público",
+    githubDisabledLabel: "Proyecto privado",
+    closeMediaLabel: "Cerrar ampliación",
   },
 
   research: [

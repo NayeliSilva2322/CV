@@ -4,7 +4,6 @@ import { ChatWidgetProvider } from "./context/ChatWidgetContext";
 import Sidebar from "./components/layout/Sidebar";
 import Footer from "./components/layout/Footer";
 import LanguageToggle from "./components/layout/LanguageToggle";
-import ProjectsNav from "./components/layout/ProjectsNav";
 import ChatWidget from "./components/sections/ChatWidget";
 import Home from "./pages/Home";
 import ProjectsPage from "./pages/ProjectsPage";
@@ -18,7 +17,6 @@ export default function App() {
           <div className="app">
             <Sidebar />
             <LanguageToggle />
-            <ProjectsNav />
             <main className="app__main">
               <Routes>
                 <Route path="/" element={<Home />} />

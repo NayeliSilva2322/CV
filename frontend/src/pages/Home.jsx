@@ -5,7 +5,6 @@ import Experience from "../components/sections/Experience";
 import Skills from "../components/sections/Skills";
 import Research from "../components/sections/Research";
 import ContactCV from "../components/sections/ContactCV";
-import AIChatSection from "../components/sections/AIChatSection";
 
 export default function Home() {
   // Si llegamos aquí desde otra página con un hash (ej. /#experiencia),
@@ -27,7 +26,6 @@ export default function Home() {
       <Skills />
       <Research />
       <ContactCV />
-      <AIChatSection />
     </>
   );
 }

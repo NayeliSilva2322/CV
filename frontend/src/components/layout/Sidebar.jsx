@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { useI18n } from "../../i18n";
 import "./Sidebar.css";
@@ -9,8 +9,25 @@ export default function Sidebar() {
   const navigate = useNavigate();
   const [active, setActive] = useState("inicio");
   const [open, setOpen] = useState(false);
+  const menuRef = useRef(null);
+  const toggleRef = useRef(null);
 
   const onProjectsPage = location.pathname === "/proyectos";
+
+  useEffect(() => {
+    if (!open) return undefined;
+
+    const closeOnOutsideClick = (event) => {
+      if (menuRef.current?.contains(event.target) || toggleRef.current?.contains(event.target)) {
+        return;
+      }
+
+      setOpen(false);
+    };
+
+    document.addEventListener("pointerdown", closeOnOutsideClick);
+    return () => document.removeEventListener("pointerdown", closeOnOutsideClick);
+  }, [open]);
 
   useEffect(() => {
     if (onProjectsPage) {
@@ -55,6 +72,7 @@ export default function Sidebar() {
   return (
     <>
       <button
+        ref={toggleRef}
         className="mobile-nav-toggle"
         aria-label={open ? t.a11y.closeMenu : t.a11y.openMenu}
         aria-expanded={open}
@@ -65,7 +83,11 @@ export default function Sidebar() {
         <span />
       </button>
 
-      <nav className={`sidebar ${open ? "sidebar--open" : ""}`} aria-label={t.a11y.mainNav}>
+      <nav
+        ref={menuRef}
+        className={`sidebar ${open ? "sidebar--open" : ""}`}
+        aria-label={t.a11y.mainNav}
+      >
         <button
           className="sidebar__brand"
           onClick={() => handleNavigate("inicio")}

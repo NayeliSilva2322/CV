@@ -1,6 +1,6 @@
 .projects-page {
   padding-top: 6rem;
-  max-width: 980px;
+  width: 100%;
 }
 
 .projects-page__back {
@@ -20,7 +20,7 @@
 }
 
 .projects-page__title {
-  font-size: var(--fs-hero);
+  font-size: var(--fs-h1);
   margin: 0.6rem 0 1.2rem;
   background: linear-gradient(
     100deg,
@@ -51,8 +51,20 @@
 
 .projects-page__grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.75rem;
+}
+
+@media (max-width: 1000px) {
+  .projects-page__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .projects-page__grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---- Tarjeta de proyecto (compartida) ---- */
@@ -85,6 +97,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.project-card__visual--clickable {
+  cursor: zoom-in;
+}
+
+.project-card__visual--clickable:focus-visible {
+  outline: 2px solid var(--accent-orange);
+  outline-offset: -2px;
 }
 
 .project-card__visual-label {
@@ -183,4 +204,110 @@
 .project-card__link--disabled {
   color: var(--text-muted);
   font-weight: 400;
+}
+
+.media-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.86);
+  cursor: zoom-out;
+}
+
+.media-lightbox__content {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(280px, 1.3fr) minmax(260px, 0.7fr);
+  gap: 2rem;
+  width: min(1100px, 94vw);
+  max-height: 90vh;
+  padding: 2rem;
+  overflow: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  cursor: default;
+}
+
+.media-lightbox__media {
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  background: var(--void);
+}
+
+.media-lightbox__content img,
+.media-lightbox__content video,
+.media-lightbox__fallback {
+  display: block;
+  width: 100%;
+  max-height: 70vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.media-lightbox__fallback {
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  display: grid;
+  place-items: center;
+  color: rgba(255, 255, 255, 0.65);
+  font-family: var(--font-mono);
+  text-transform: lowercase;
+}
+
+.media-lightbox__details {
+  align-self: center;
+}
+
+.media-lightbox__details h2 {
+  margin: 0.5rem 0 1rem;
+  font-size: var(--fs-h2);
+}
+
+.media-lightbox__details p {
+  font-size: var(--fs-small);
+}
+
+.media-lightbox__close {
+  position: absolute;
+  top: 0.65rem;
+  right: 0.65rem;
+  z-index: 1;
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  line-height: 1;
+}
+
+.media-lightbox__close:hover {
+  border-color: var(--accent-orange);
+}
+
+@media (max-width: 700px) {
+  .media-lightbox {
+    padding: 1rem;
+  }
+
+  .media-lightbox__content {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+
+  .media-lightbox__media,
+  .media-lightbox__fallback {
+    min-height: 190px;
+  }
 }

@@ -75,7 +75,7 @@ img {
 }
 
 .section {
-  padding: 6rem var(--gutter) 4rem;
+  padding: 4rem var(--gutter) 2.5rem;
   scroll-margin-top: 2rem;
 }
 
