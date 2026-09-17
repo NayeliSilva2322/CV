@@ -1,8 +1,3 @@
-// ---------------------------------------------------------------------------
-// Contenido completo del sitio en ESPAÑOL. Es la "caja" de traducción: cada
-// componente lee de aquí (vía useI18n()) en lugar de tener texto fijo.
-// Todo el contenido proviene literalmente del CV; no se ha inventado nada.
-// ---------------------------------------------------------------------------
 
 export const es = {
   meta: {
