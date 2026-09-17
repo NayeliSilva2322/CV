@@ -66,7 +66,7 @@ export const es = {
   },
 
   sectionTitles: {
-    about: "About me",
+    about: "Sobre mi",
     experience: "Experiencia",
     skills: "Skills y tecnologías",
     projects: "Proyectos",
