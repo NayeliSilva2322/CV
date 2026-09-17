@@ -28,8 +28,8 @@ export const es = {
     location: "Lima, Perú",
     phone: "+51 916 702 985",
     email: "nabanto18@gmail.com",
-    linkedin: "", // TODO: pega tu URL de LinkedIn
-    github: "", // TODO: pega tu URL de GitHub
+    linkedin: "https://www.linkedin.com/in/cyndi-nayeli-silva-abanto/", // TODO: pega tu URL de LinkedIn
+    github: "https://github.com/NayeliSilva2322", // TODO: pega tu URL de GitHub
     summary: [
       "Data Scientist y AI Engineer con experiencia en el desarrollo e integración de soluciones de IA, LLMs y Computer Vision. He desarrollado aplicaciones end-to-end, desde la ingesta y procesamiento de datos hasta el despliegue e integración de modelos con bases de datos vectoriales y servicios cloud.",
       "Experiencia en automatización y orquestación de workflows con LangGraph y plataformas NoCode, desarrollo de APIs con FastAPI y Flask, containerización con Docker y seguimiento y evaluación de experimentos con MLflow.",
