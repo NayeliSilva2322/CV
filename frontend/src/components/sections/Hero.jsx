@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { useI18n } from "../../i18n";
 import Button from "../ui/Button";
 import "./Hero.css";
@@ -7,18 +6,11 @@ import "./Hero.css";
 export default function Hero() {
   const { t } = useI18n();
   const { profile } = t;
-  const navigate = useNavigate();
   const [photoOk, setPhotoOk] = useState(true);
 
   const scrollTo = (id) => (e) => {
     e.preventDefault();
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const openProjects = (e) => {
-    e.preventDefault();
-    navigate("/proyectos");
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -32,9 +24,6 @@ export default function Hero() {
           <p className="hero__lead">{t.hero.lead}</p>
 
           <div className="hero__actions">
-            <Button as="a" href="/proyectos" variant="primary" onClick={openProjects}>
-              {t.hero.ctaProjects}
-            </Button>
             <Button as="a" href="#contacto" variant="outline" onClick={scrollTo("contacto")}>
               {t.hero.ctaContact}
             </Button>

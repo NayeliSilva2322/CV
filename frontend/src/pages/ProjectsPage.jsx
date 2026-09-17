@@ -42,7 +42,17 @@ export default function ProjectsPage() {
         {projects.map((project, i) => (
           <Reveal as="article" className="project-card" delay={i * 90} key={project.id}>
             <div className={`project-card__visual project-card__visual--${project.visual}`}>
-              {project.image ? (
+              {project.video ? (
+                <video
+                  src={project.video}
+                  aria-label={project.title}
+                  controls
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                />
+              ) : project.image ? (
                 <img src={project.image} alt={project.title} />
               ) : (
                 <span className="project-card__visual-label">{project.visual}</span>

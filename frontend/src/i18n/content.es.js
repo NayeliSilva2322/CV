@@ -190,6 +190,7 @@ export const es = {
       visual: "radar",
       github: "",
       image: "",
+      video: "",
     },
     {
       id: "biospace-nasa-space-apps",
@@ -202,6 +203,7 @@ export const es = {
       visual: "space",
       github: "",
       image: "",
+      video: "",
     },
     {
       id: "llm-rag-legal",
@@ -214,6 +216,7 @@ export const es = {
       visual: "legal",
       github: "",
       image: "",
+      video: "",
     },
   ],
   projectsPage: {
