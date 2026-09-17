@@ -28,8 +28,8 @@ export const en = {
     location: "Lima, Peru",
     phone: "+51 916 702 985",
     email: "nabanto18@gmail.com",
-    linkedin: "https://www.linkedin.com/in/cyndi-nayeli-silva-abanto/", // TODO: paste your LinkedIn URL
-    github: "https://github.com/NayeliSilva2322", // TODO: paste your GitHub URL
+    linkedin: "", // TODO: paste your LinkedIn URL
+    github: "", // TODO: paste your GitHub URL
     summary: [
       "Data Scientist and AI Engineer with experience developing and integrating AI, LLM, and Computer Vision solutions. I've built end-to-end applications — from data ingestion and processing to model deployment and integration with vector databases and cloud services.",
       "Experienced in workflow automation and orchestration with LangGraph and NoCode platforms, API development with FastAPI and Flask, containerization with Docker, and experiment tracking and evaluation with MLflow.",
